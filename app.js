@@ -31,11 +31,15 @@ console.log('BD server: ' + config.get('configDB.host'))
 app.get('/', (req, res) => {
     res.send('Hola desde express');
 });
+app.get('/code', (res, res, next) => {
+    res.send('CODE: 500');
+});
 
 
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
     console.log(`Escuchando puerto ${port}...`);
+    console.log(`Puerto ${port} probando commit`);
 })
 
